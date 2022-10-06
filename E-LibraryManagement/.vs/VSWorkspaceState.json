@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\E-LibraryManagement",
+    "\\E-LibraryManagement.DataModel",
+    "\\E-LibraryManagement.DataModel\\Entities",
+    "\\E-LibraryManagement.DataModel\\Repository",
+    "\\E-LibraryManagement.DataModel\\Repository\\Interface",
+    "\\E-LibraryManagement\\Controllers",
+    "\\E-LibraryManagement\\Services"
+  ],
+  "SelectedNode": "\\E-LibraryManagement.sln",
+  "PreviewInSolutionExplorer": false
+}

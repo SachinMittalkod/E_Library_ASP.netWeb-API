@@ -1,0 +1,12 @@
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\bin\Debug\net5.0\E-LibraryManagement.ServiceModel.deps.json
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\bin\Debug\net5.0\E-LibraryManagement.ServiceModel.dll
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\bin\Debug\net5.0\E-LibraryManagement.ServiceModel.pdb
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\E-LibraryManagement.ServiceModel.csproj.AssemblyReference.cache
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\E-LibraryManagement.ServiceModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\E-LibraryManagement.ServiceModel.AssemblyInfoInputs.cache
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\E-LibraryManagement.ServiceModel.AssemblyInfo.cs
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\E-LibraryManagement.ServiceModel.csproj.CoreCompileInputs.cache
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\E-LibraryManagement.ServiceModel.dll
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\refint\E-LibraryManagement.ServiceModel.dll
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\E-LibraryManagement.ServiceModel.pdb
+C:\ASPnetWebApi\E-LibraryManagement\E-LibraryManagement.ServiceModel\obj\Debug\net5.0\ref\E-LibraryManagement.ServiceModel.dll

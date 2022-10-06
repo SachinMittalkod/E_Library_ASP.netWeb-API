@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "xtftkEl2Hn3u9MFi4fdO/EYkQyOk1YxRKshb1gQNUygd1zlfzex7nDtu2ejwQ7CYcwwCUd5fYLbD3b5ajTMF8g==",
+  "success": true,
+  "projectFilePath": "C:\\ASPnetWebApi\\E-LibraryManagement\\E-LibraryManagement.ServiceModel\\E-LibraryManagement.ServiceModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
