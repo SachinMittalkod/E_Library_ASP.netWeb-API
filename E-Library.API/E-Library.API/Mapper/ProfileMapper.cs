@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using E_Library.DataModels.DTO;
-using E_Library.DataModels.Entities;
+using E_Library.DataModels.entities;
 
 namespace E_Library.API.Mapper
 {
@@ -9,6 +9,8 @@ namespace E_Library.API.Mapper
         public ProfileMapper()
         {
             CreateMap<BookDetail, BookDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<UserRequest, UserRequestDTO>().ReverseMap();
         }
     }
 }

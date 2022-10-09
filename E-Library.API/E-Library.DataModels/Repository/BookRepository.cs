@@ -1,4 +1,4 @@
-﻿using E_Library.DataModels.Entities;
+﻿using E_Library.DataModels.entities;
 using E_Library.DataModels.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -47,6 +47,27 @@ namespace E_Library.DataModels.Repository
             _LibraryManagementContext.Remove(book);
             _LibraryManagementContext.SaveChanges();
             return true;
+        }
+
+        public List<BookDetail> GetAllBookDetails()
+        {
+            var data=_LibraryManagementContext.BookDetails.ToList();
+            return data;
+        }
+
+        public BookDetail GetBookById(int id)
+        {
+            BookDetail data = _LibraryManagementContext.BookDetails.FirstOrDefault(x => x.BookId == id);
+           
+
+            if (data != null)
+            {
+                _LibraryManagementContext.Entry(data).State=EntityState.Detached;
+                return data;
+            }
+            return null;
+
+          
         }
     }
 }

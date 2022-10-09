@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ASPnetWebApi\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj": {}
+    "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj": {}
   },
   "projects": {
-    "C:\\ASPnetWebApi\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj": {
+    "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj",
+        "projectUniqueName": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj",
         "projectName": "E-Library.ServiceModel",
-        "projectPath": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj",
+        "projectPath": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj",
         "packagesPath": "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\",
-        "outputPath": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.ServiceModel\\obj\\",
+        "outputPath": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.ServiceModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sachin.mittalkod\\AppData\\Roaming\\NuGet\\NuGet.Config",

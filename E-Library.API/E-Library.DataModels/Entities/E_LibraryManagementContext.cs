@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace E_Library.DataModels.Entities
+namespace E_Library.DataModels.entities
 {
     public partial class E_LibraryManagementContext : DbContext
     {
@@ -101,19 +101,22 @@ namespace E_Library.DataModels.Entities
 
             modelBuilder.Entity<UserRequest>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.RequestId)
+                    .HasName("PK__UserRequ__33A8517A47CD2F98");
+
+                entity.Property(e => e.RequestId).ValueGeneratedNever();
 
                 entity.Property(e => e.Date).HasColumnType("date");
 
                 entity.HasOne(d => d.Book)
-                    .WithMany()
+                    .WithMany(p => p.UserRequests)
                     .HasForeignKey(d => d.BookId)
-                    .HasConstraintName("FK__UserReque__BookI__46E78A0C");
+                    .HasConstraintName("fk__userreque__booki__60a75c0f");
 
                 entity.HasOne(d => d.User)
-                    .WithMany()
+                    .WithMany(p => p.UserRequests)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__UserReque__UserI__45F365D3");
+                    .HasConstraintName("fk__userreque__useri__5fb337d6");
             });
 
             OnModelCreatingPartial(modelBuilder);

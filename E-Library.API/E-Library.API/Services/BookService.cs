@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using E_Library.API.Services.Interface;
-using E_Library.DataModels.Entities;
+using E_Library.DataModels.entities;
 using E_Library.DataModels.Repository.Interface;
 
 namespace E_Library.API.Services
@@ -28,6 +28,16 @@ namespace E_Library.API.Services
         public bool DeleteBook(int id)
         {
             return _bookRepository.DeleteBook(id);
+        }
+
+        public List<BookDetail> GetAllBookDetails()
+        {
+            return _bookRepository.GetAllBookDetails();
+        }
+
+        public BookDetail GetBookById(int id)
+        {
+            return _bookRepository.GetBookById(id);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace E_Library.DataModels.Entities
+namespace E_Library.DataModels.entities
 {
     public partial class CheckRole
     {

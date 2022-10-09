@@ -2224,11 +2224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.API\\E-Library.API.csproj",
+      "projectUniqueName": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.API\\E-Library.API.csproj",
       "projectName": "E-Library.API",
-      "projectPath": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.API\\E-Library.API.csproj",
+      "projectPath": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.API\\E-Library.API.csproj",
       "packagesPath": "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\",
-      "outputPath": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.API\\obj\\",
+      "outputPath": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sachin.mittalkod\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2245,11 +2245,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\ASPnetWebApi\\E-Library.API\\E-Library.DataModels\\E-Library.DataModel.csproj": {
-              "projectPath": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.DataModels\\E-Library.DataModel.csproj"
+            "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.DataModels\\E-Library.DataModel.csproj": {
+              "projectPath": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.DataModels\\E-Library.DataModel.csproj"
             },
-            "C:\\ASPnetWebApi\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj": {
-              "projectPath": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj"
+            "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj": {
+              "projectPath": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.ServiceModel\\E-Library.ServiceModel.csproj"
             }
           }
         }

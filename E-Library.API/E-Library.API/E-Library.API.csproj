@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\E-Library.DataModels\E-Library.DataModel.csproj" />
     <ProjectReference Include="..\E-Library.ServiceModel\E-Library.ServiceModel.csproj" />
   </ItemGroup>

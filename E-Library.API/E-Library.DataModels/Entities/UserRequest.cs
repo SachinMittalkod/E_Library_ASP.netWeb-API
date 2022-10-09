@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace E_Library.DataModels.Entities
+namespace E_Library.DataModels.entities
 {
     public partial class UserRequest
     {
-        public int? RequestId { get; set; }
+        public int RequestId { get; set; }
         public int? UserId { get; set; }
         public DateTime? Date { get; set; }
         public int? BookId { get; set; }

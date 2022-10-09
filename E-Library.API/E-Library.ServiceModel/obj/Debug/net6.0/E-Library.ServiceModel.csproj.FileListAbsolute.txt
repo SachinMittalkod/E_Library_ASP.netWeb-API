@@ -10,3 +10,15 @@ C:\ASPnetWebApi\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.
 C:\ASPnetWebApi\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\refint\E-Library.ServiceModel.dll
 C:\ASPnetWebApi\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.ServiceModel.pdb
 C:\ASPnetWebApi\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\ref\E-Library.ServiceModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\bin\Debug\net6.0\E-Library.ServiceModel.deps.json
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\bin\Debug\net6.0\E-Library.ServiceModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\bin\Debug\net6.0\E-Library.ServiceModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.ServiceModel.csproj.AssemblyReference.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.ServiceModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.ServiceModel.AssemblyInfoInputs.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.ServiceModel.AssemblyInfo.cs
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.ServiceModel.csproj.CoreCompileInputs.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.ServiceModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\refint\E-Library.ServiceModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\E-Library.ServiceModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.ServiceModel\obj\Debug\net6.0\ref\E-Library.ServiceModel.dll

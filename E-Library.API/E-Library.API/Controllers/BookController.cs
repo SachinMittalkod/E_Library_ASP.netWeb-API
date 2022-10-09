@@ -2,7 +2,7 @@
 using E_Library.API.Services;
 using E_Library.API.Services.Interface;
 using E_Library.DataModels.DTO;
-using E_Library.DataModels.Entities;
+using E_Library.DataModels.entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,8 +17,33 @@ namespace E_Library.API.Controllers
 
         public BookController(IBookService bookService, IMapper mapper)
         {
-            _bookService=bookService;
-             _mapper = mapper;
+            _bookService = bookService;
+            _mapper = mapper;
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<BookDTO> GetBookById(int id)
+        {
+            var book = _bookService.GetBookById(id);
+            if(book == null)
+            {
+                return NotFound("The Entered ID not found");  
+            }
+            return Ok(book);
+        }
+
+        [HttpGet]
+        public ActionResult< List<BookDetail>> GetBookDetails()
+        {
+            var data=_bookService.GetAllBookDetails();
+            if (data == null)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                return Ok(data);
+            }
         }
 
         [HttpPost]

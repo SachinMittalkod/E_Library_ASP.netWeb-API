@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace E_Library.DataModels.Entities
+namespace E_Library.DataModels.entities
 {
     public partial class User
     {
         public User()
         {
             BookDetails = new HashSet<BookDetail>();
+            UserRequests = new HashSet<UserRequest>();
         }
 
         public int UserId { get; set; }
@@ -19,5 +20,6 @@ namespace E_Library.DataModels.Entities
         public int RoleId { get; set; }
 
         public virtual ICollection<BookDetail> BookDetails { get; set; }
+        public virtual ICollection<UserRequest> UserRequests { get; set; }
     }
 }

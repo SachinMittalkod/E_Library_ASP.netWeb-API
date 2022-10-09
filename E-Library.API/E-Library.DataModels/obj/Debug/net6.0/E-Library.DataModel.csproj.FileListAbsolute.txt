@@ -12,3 +12,17 @@ C:\ASPnetWebApi\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\refint\E-Lib
 C:\ASPnetWebApi\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.pdb
 C:\ASPnetWebApi\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.genruntimeconfig.cache
 C:\ASPnetWebApi\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\ref\E-Library.DataModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\bin\Debug\net6.0\E-Library.DataModel.deps.json
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\bin\Debug\net6.0\E-Library.DataModel.runtimeconfig.json
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\bin\Debug\net6.0\E-Library.DataModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\bin\Debug\net6.0\E-Library.DataModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.csproj.AssemblyReference.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.AssemblyInfoInputs.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.AssemblyInfo.cs
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.csproj.CoreCompileInputs.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\refint\E-Library.DataModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\E-Library.DataModel.genruntimeconfig.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.DataModels\obj\Debug\net6.0\ref\E-Library.DataModel.dll

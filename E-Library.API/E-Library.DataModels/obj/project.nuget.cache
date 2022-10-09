@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BvIlT6Qnw4XprbgMbaO3iA9Q0cLB6rykIv01/GhnLJr1lvOKmo+gc+kK9sm0t+ofv4sdPN6313krRB4IhQJGHA==",
+  "dgSpecHash": "m8iZh/X+KxH0ILDI/WEsFtJ+vEFc30OnacfZFQ911jz67u3F0iqgbraio4e1uULTOdd0I+ZA2H2epfOuinYrjA==",
   "success": true,
-  "projectFilePath": "C:\\ASPnetWebApi\\E-Library.API\\E-Library.DataModels\\E-Library.DataModel.csproj",
+  "projectFilePath": "C:\\ASPnetWebApi\\E_Library_ASP.netWeb-API\\E-Library.API\\E-Library.DataModels\\E-Library.DataModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\sachin.mittalkod\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
