@@ -23,36 +23,23 @@ namespace E_Library.DataModels.Repository
             _e_LibraryManagementContext = e_LibraryManagementContext;
         }
 
-        public Task<User> Login(string name, string password)
+        public async Task<User> AuthenticateUser(LoginDTO loginDTO)
         {
-            throw new NotImplementedException();
+            var userDetails = await _e_LibraryManagementContext.Users.FirstOrDefaultAsync(x => x.Name == loginDTO.Name
+            && x.Password == loginDTO.Password);
+            if(userDetails != null)
+            {
+                var user = new User()
+                {
+                    Name = userDetails.Name,
+                    Password = userDetails.Password,
+                };
+                return user;    
+            }
+            else
+            {
+                return userDetails;
+            }
         }
-
-
-
-        //}
-
-        //public async Task<User>  Login(LoginDTO loginDTO)
-        //{
-        //    var userDetails = await _e_LibraryManagementContext.Users.FirstOrDefaultAsync(x => x.Name == loginDTO.Name &&
-        //    x.Password == loginDTO.Password);
-
-        //    if (userDetails != null)
-        //    {
-        //        var user = new User
-        //        {
-        //            Name = userDetails.Name,
-        //            Password = userDetails.Password
-        //        };
-        //        return user;
-
-        //    }
-        //    else
-        //    {
-        //        return userDetails;
-        //    }
-        //}
-
-
     }
 }

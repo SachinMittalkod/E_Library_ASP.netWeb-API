@@ -70,7 +70,7 @@ namespace E_Library.API.Controllers
                 return BadRequest();
             }
 
-            if(id != updatebookDTO.UserId)
+            if(id != updatebookDTO.BookId)
             {
                 return BadRequest(ModelState);
             }
@@ -82,10 +82,7 @@ namespace E_Library.API.Controllers
                 ModelState.AddModelError("", "Something went wrong updating category");
                 return StatusCode(500, ModelState);
             }
-
             return NoContent();
-
-
         }
 
         [HttpDelete("{id}")]
