@@ -14,9 +14,11 @@ namespace E_Library.API.Services
             _loginRepository = loginRepository;
         }
 
-        public Task<User> AuthenticateUser(LoginDTO loginDTO)
+     
+
+        public async Task<User> LoginUser(User user)
         {
-           return _loginRepository.AuthenticateUser(loginDTO);
+            return await _loginRepository.LoginUser(user);
         }
     }
 }

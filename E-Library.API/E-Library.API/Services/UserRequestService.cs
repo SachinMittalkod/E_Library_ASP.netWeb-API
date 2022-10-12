@@ -13,12 +13,12 @@ namespace E_Library.API.Services
             _userRequestRepository = userRequestRepository;
         }
 
-        public List<UserRequest> GetAllRequests()
+        public async Task<IEnumerable<UserRequest>> GetAllRequests()
         {
-            return _userRequestRepository.GetAllRequests();
+            return await _userRequestRepository.GetAllRequests();
         }
 
-        public int MakeRequest(UserRequest urequest)
+        public Task<int> MakeRequest(UserRequest urequest)
         {
            return _userRequestRepository.MakeRequest(urequest);
           

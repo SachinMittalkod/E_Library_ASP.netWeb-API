@@ -9,14 +9,14 @@ namespace E_Library.DataModels.Repository.Interface
 {
     public interface IBookRepository
     {
-        public List<BookDetail> GetAllBookDetails();
+        public Task<IEnumerable<BookDetail>> GetAllBookDetails();
 
-        public BookDetail GetBookById(int id);
-        public int AddBook(BookDetail bookDetail);   
+        public Task<BookDetail> GetBookById(int id);
+        Task<int> AddBook(BookDetail bookDetail);
         public bool UpdateBook(BookDetail bookDetail);
-        
-        public bool DeleteBook(int id);
+        public Task<int> DeleteBook(int id);
         bool Save();
 
+        
     }
 }

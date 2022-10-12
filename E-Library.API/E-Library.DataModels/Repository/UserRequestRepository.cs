@@ -18,21 +18,22 @@ namespace E_Library.DataModels.Repository
             _LibraryManagementContext = e_LibraryManagementContext;
         }
 
-        public List<UserRequest> GetAllRequests()
+        public async Task<IEnumerable<UserRequest>> GetAllRequests()
         {
-            var data=_LibraryManagementContext.UserRequests.ToList();
+            var data=await  _LibraryManagementContext.UserRequests.ToListAsync();
             return data;
         }
 
-        public int MakeRequest(UserRequest urequest)
+        public async Task<int> MakeRequest(UserRequest urequest)
         {
-             _LibraryManagementContext.UserRequests.AddAsync(urequest);
-            _LibraryManagementContext.SaveChanges();    
+             await _LibraryManagementContext.UserRequests.AddAsync(urequest);
+             _LibraryManagementContext.SaveChanges();    
             return 1;
         }
 
         public bool UpdateRequest(UserRequest urequest)
         {
+          
             _LibraryManagementContext.Update(urequest);
             _LibraryManagementContext.SaveChanges();
             return true;

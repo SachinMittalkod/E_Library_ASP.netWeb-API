@@ -128,3 +128,4 @@ C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.API\obj\Debug\n
 C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.API\obj\Debug\net6.0\E-Library.API.pdb
 C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.API\obj\Debug\net6.0\E-Library.API.genruntimeconfig.cache
 C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.API\obj\Debug\net6.0\ref\E-Library.API.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-Library.API\E-Library.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

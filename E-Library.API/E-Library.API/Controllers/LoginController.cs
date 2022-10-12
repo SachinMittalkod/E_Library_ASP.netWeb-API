@@ -1,6 +1,7 @@
 ﻿using E_Library.API.Services.Interface;
 using E_Library.DataModels.DTO;
 using E_Library.DataModels.entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,31 +9,37 @@ namespace E_Library.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class LoginController : ControllerBase
     {
         private readonly ILoginService _loginService;
-        private readonly ITokenService _tokenService;
+       
 
-        public LoginController(ILoginService loginService, ITokenService tokenService)
+    public LoginController(ILoginService loginService)
         {
             _loginService = loginService;
-            _tokenService = tokenService;
+            
         }
+
         [HttpPost]
-        public async Task<IActionResult> Login([FromForm]LoginDTO loginDTO)
+        public async Task<ActionResult<User>> LoginUser([FromForm]LoginDTO logindata)
         {
-            IActionResult response = Unauthorized("Invalid User");
-            User user = await _loginService.AuthenticateUser(loginDTO);
-            if(user != null)
+            var data = new User
             {
-                var tokenString = _tokenService.CreateToken(user);
-                response = Ok(new
-                {
-                    token = tokenString,
-                    userDetails = user,
-                });
+                Name=logindata.Name,
+                Password=logindata.Password
+            };
+
+            var result= await _loginService.LoginUser(data);
+            if (result != null)
+            {
+                return Ok("Login Success");
             }
-            return response;
+            else
+            {
+                return BadRequest("Invalid credentials or Enter Values");
+            }
         }
+       
     }
 }

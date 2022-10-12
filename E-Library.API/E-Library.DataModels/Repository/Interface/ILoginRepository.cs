@@ -10,6 +10,6 @@ namespace E_Library.DataModels.Repository.Interface
 {
     public interface ILoginRepository
     {
-        public Task<User> AuthenticateUser(LoginDTO loginDTOs);
+        public Task<User> LoginUser(User login);
     }
 }

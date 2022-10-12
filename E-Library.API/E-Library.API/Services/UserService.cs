@@ -1,5 +1,6 @@
 ﻿using E_Library.API.Services.Interface;
 using E_Library.DataModels.entities;
+using E_Library.DataModels.Repository;
 using E_Library.DataModels.Repository.Interface;
 
 namespace E_Library.API.Services
@@ -13,9 +14,14 @@ namespace E_Library.API.Services
             _userRepository = userRepository;
         }
 
-        public bool DeleteUser(int id)
+        public async Task<int> DeleteUser(int id)
         {
-            return _userRepository.DeleteUser(id);
+            return await _userRepository.DeleteUser(id);
+        }
+
+        public Task<IEnumerable<User>> GetUserDetails()
+        {
+            return _userRepository.GetUserDetails();
         }
 
         public async Task<int> RegisterUser(User user)
@@ -30,6 +36,11 @@ namespace E_Library.API.Services
             return true;
         }
 
-     
+        //public async Task<User> LoginUser(User user)
+        //{
+        //    return await _userRepository.LoginUser(user);
+        //}
+
+
     }
 }

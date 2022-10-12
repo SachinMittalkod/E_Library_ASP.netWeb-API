@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using E_Library.API.Services;
 using E_Library.API.Services.Interface;
 using E_Library.DataModels.DTO;
 using E_Library.DataModels.entities;
@@ -62,5 +63,40 @@ namespace E_Library.API.Controllers
             return Ok();    
 
         }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> GetUserDetails()
+        {
+            var data =await _userService.GetUserDetails();
+            if (data == null)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                return Ok(data);
+            }
+
+        }
+
+        //[HttpPost]
+        //public async Task<ActionResult<string>> LoginUser([FromForm] User logindata)
+        //{
+        //    var data = new User
+        //    {
+        //        Name = logindata.Name,
+        //        Password = logindata.Password
+        //    };
+
+        //    var result = await _userService.LoginUser(data);
+        //    if (result != null)
+        //    {
+        //        return "Login Success";
+        //    }
+        //    else
+        //    {
+        //        return "Invalid credentials or Enter Values";
+        //    }
+        //}
     }
 }

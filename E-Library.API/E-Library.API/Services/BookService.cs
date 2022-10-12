@@ -9,35 +9,34 @@ namespace E_Library.API.Services
     {
         private readonly IBookRepository _bookRepository;
         
-        public BookService(IBookRepository bookRepository  )
+        public BookService(IBookRepository bookRepository)
         {
             _bookRepository = bookRepository;
            
         }
-        public int AddBook(BookDetail bookDetail)
+        public async Task<int> AddBook(BookDetail bookDetail)
         {
-         return _bookRepository.AddBook(bookDetail);
+         return await _bookRepository.AddBook(bookDetail);
         }
-
-       
 
         public bool UpdateBook(BookDetail bookDetail)
         {
             return _bookRepository.UpdateBook(bookDetail);
         }
-        public bool DeleteBook(int id)
+
+        public async Task<int> DeleteBook(int id)
         {
-            return _bookRepository.DeleteBook(id);
+            return await _bookRepository.DeleteBook(id);
         }
 
-        public List<BookDetail> GetAllBookDetails()
+        public async Task<IEnumerable<BookDetail>> GetAllBookDetails()
         {
-            return _bookRepository.GetAllBookDetails();
+            return await _bookRepository.GetAllBookDetails();
         }
 
-        public BookDetail GetBookById(int id)
+        public async Task<BookDetail> GetBookById(int id)
         {
-            return _bookRepository.GetBookById(id);
+            return await _bookRepository.GetBookById(id);
         }
     }
 }

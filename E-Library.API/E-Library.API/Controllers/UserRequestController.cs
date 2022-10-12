@@ -23,9 +23,9 @@ namespace E_Library.API.Controllers
 
         [HttpGet]   
 
-        public ActionResult<List<UserRequest>> GetAllRequests()
+        public async Task<ActionResult<IEnumerable<UserRequest>>> GetAllRequests()
         {
-            var data= _userRequestService.GetAllRequests();
+            var data= await _userRequestService.GetAllRequests();
             if(data==null)
             {
                 return BadRequest();
@@ -34,6 +34,7 @@ namespace E_Library.API.Controllers
         }
 
         [HttpPost]
+        //MakeRequest Method
         public ActionResult<int> PostRequest([FromForm]UserRequestDTO userRequest)
         {
             var data=_mapper.Map<UserRequest>(userRequest);
@@ -49,7 +50,6 @@ namespace E_Library.API.Controllers
      
 
         [HttpPut("{id}")]
-
         public ActionResult UpdateRequest(int id, [FromForm]UserRequestDTO userRequestDTO)
         {
             if (userRequestDTO == null)

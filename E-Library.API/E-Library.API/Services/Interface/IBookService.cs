@@ -4,10 +4,11 @@ namespace E_Library.API.Services.Interface
 {
     public interface IBookService
     {
-        public List<BookDetail> GetAllBookDetails();
-        public BookDetail GetBookById(int id);
-        public int AddBook(BookDetail bookDetail);
+        public Task<IEnumerable<BookDetail>> GetAllBookDetails();
+        public Task<BookDetail> GetBookById(int id);
+        Task<int> AddBook(BookDetail bookDetail);
         public bool UpdateBook(BookDetail bookDetail);
-        public bool DeleteBook(int id);
+       
+        public Task<int> DeleteBook(int id);
     }
 }

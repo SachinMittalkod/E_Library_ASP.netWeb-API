@@ -17,10 +17,10 @@ namespace E_Library.DataModels.Repository
         {
             _LibraryManagementContext = context;    
         }
-        public  int AddBook(BookDetail bookDetail)
+        public async  Task<int> AddBook(BookDetail bookDetail)
         {
-             _LibraryManagementContext.BookDetails.Add(bookDetail); 
-             _LibraryManagementContext.SaveChanges();
+            await _LibraryManagementContext.BookDetails.AddAsync(bookDetail); 
+            await _LibraryManagementContext.SaveChangesAsync();
             return 1;   
         }
 
@@ -38,32 +38,36 @@ namespace E_Library.DataModels.Repository
             return Save();
         }
 
-        public  bool DeleteBook(int id)
+        public async  Task<int> DeleteBook(int id)
         {
+            
             var book = new BookDetail()
             {
                 BookId = id
             };
-            _LibraryManagementContext.Remove(book);
-            _LibraryManagementContext.SaveChanges();
-            return true;
+
+             _LibraryManagementContext.Remove(book);
+             _LibraryManagementContext.SaveChanges();
+            return 1;
         }
 
-        public List<BookDetail> GetAllBookDetails()
+        public async Task<IEnumerable<BookDetail>> GetAllBookDetails()
         {
-            var data=_LibraryManagementContext.BookDetails.ToList();
+            var data=await _LibraryManagementContext.BookDetails.ToListAsync();
             return data;
         }
 
-        public BookDetail GetBookById(int id)
+        public async Task<BookDetail> GetBookById(int id)
         {
-            BookDetail data = _LibraryManagementContext.BookDetails.FirstOrDefault(x => x.BookId == id);
+            BookDetail data =await _LibraryManagementContext.BookDetails.FirstOrDefaultAsync(x => x.BookId == id);
            
 
             if (data != null)
             {
+
                 _LibraryManagementContext.Entry(data).State=EntityState.Detached;
                 return data;
+
             }
             return null;
 

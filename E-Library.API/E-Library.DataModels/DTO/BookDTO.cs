@@ -15,7 +15,6 @@ namespace E_Library.DataModels.DTO
         public DateTime? Date { get; set; }
         public string? ImageUrl { get; set; }
         public int? UserId { get; set; }
-
-        //public virtual User? User { get; set; }
+       
     }
 }

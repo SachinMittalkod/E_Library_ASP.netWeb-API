@@ -5,6 +5,6 @@ namespace E_Library.API.Services.Interface
 {
     public interface ILoginService
     {
-        public Task<User> AuthenticateUser(LoginDTO loginDTO);
+        public Task<User> LoginUser(User user);
     }
 }

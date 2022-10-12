@@ -10,9 +10,9 @@ namespace E_Library.DataModels.Repository.Interface
 {
     public interface IUserRequestRepository
     {
-        public int MakeRequest(UserRequest urequest);
+        public Task<int> MakeRequest(UserRequest urequest);
         public bool UpdateRequest(UserRequest urequest);
 
-        public List<UserRequest> GetAllRequests();
+        public Task<IEnumerable<UserRequest>> GetAllRequests();
     }
 }

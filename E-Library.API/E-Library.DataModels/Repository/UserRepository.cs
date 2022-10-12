@@ -2,6 +2,7 @@
 
 using E_Library.DataModels.entities;
 using E_Library.DataModels.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,15 +44,30 @@ namespace E_Library.DataModels.Repository
              return Save();
         }
 
-        public bool DeleteUser(int id)
+        public async Task<int> DeleteUser(int id)
         {
            var Deleteuser=new User()
            {
                UserId= id
            };
-         _LibraryManagementContext.Users.Remove(Deleteuser);
-            _LibraryManagementContext.SaveChanges();
-            return true;
+            _LibraryManagementContext.Users.Remove(Deleteuser);
+            await _LibraryManagementContext.SaveChangesAsync();
+            return 1;
         }
+
+        public async Task<IEnumerable<User>> GetUserDetails()
+        {
+            var data=await _LibraryManagementContext.Users.ToListAsync();
+            return data;
+        }
+
+        //public async Task<User> LoginUser(User user)
+        //{
+        //    User UserData = await _LibraryManagementContext.Users.FirstOrDefaultAsync(x => x.Name == user.Name &&
+        //    x.Password == user.Password);
+
+        //    return UserData;
+
+        //}
     }
 }

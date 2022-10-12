@@ -3,6 +3,7 @@ using E_Library.API.Services;
 using E_Library.API.Services.Interface;
 using E_Library.DataModels.DTO;
 using E_Library.DataModels.entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,9 +23,9 @@ namespace E_Library.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<BookDTO> GetBookById(int id)
+        public async Task<ActionResult<BookDTO>> GetBookById(int id)
         {
-            var book = _bookService.GetBookById(id);
+            var book =await _bookService.GetBookById(id);
             if(book == null)
             {
                 return NotFound("The Entered ID not found");  
@@ -33,9 +34,9 @@ namespace E_Library.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult< List<BookDetail>> GetBookDetails()
+        public async Task<ActionResult<IEnumerable<BookDetail>>> GetBookDetails()
         {
-            var data=_bookService.GetAllBookDetails();
+            var data=await _bookService.GetAllBookDetails();
             if (data == null)
             {
                 return BadRequest();
@@ -47,36 +48,41 @@ namespace E_Library.API.Controllers
         }
 
         [HttpPost]
-        public ActionResult<int> PostBook([FromForm] BookDTO book)
+        public async  Task<ActionResult<int>> PostBook([FromForm] BookDTO bookDTO)
         {
-            var request=_mapper.Map<BookDetail>(book);
-            var requestdata = _bookService.AddBook(request);
-            var mapRequest=_mapper.Map<BookDTO>(request);
-            if(mapRequest == null)
+            //var request=_mapper.Map<BookDetail>(book);
+            //var requestdata = _bookService.AddBook(request);
+            //var mapRequest=_mapper.Map<BookDTO>(request);
+
+            var bookDetail = new BookDetail
             {
-                return NotFound();
-            }
-            else
-            {
-                return Ok(mapRequest);
-            }
+                BookId = bookDTO.BookId,
+                AuthorName = bookDTO.AuthorName,
+                BookName = bookDTO.BookName,
+                Date = bookDTO.Date,
+                ImageUrl = bookDTO.ImageUrl,
+                UserId = bookDTO.UserId
+             
+            };
+            return await _bookService.AddBook(bookDetail);      
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public ActionResult UpdateBook(int id, [FromForm] BookDTO updatebookDTO)
         {
             if (updatebookDTO == null)
             {
+                
                 return BadRequest();
             }
 
-            if(id != updatebookDTO.BookId)
+            if (id != updatebookDTO.BookId)
             {
                 return BadRequest(ModelState);
             }
 
             var mapping = _mapper.Map<BookDetail>(updatebookDTO);
-
+                
             if (!_bookService.UpdateBook(mapping))
             {
                 ModelState.AddModelError("", "Something went wrong updating category");
