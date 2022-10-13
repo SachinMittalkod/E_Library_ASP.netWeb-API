@@ -69,5 +69,14 @@ namespace E_Library.API.Controllers
             }
             return NoContent();
         }
+
+        //[HttpGet]
+
+        //public ActionResult<int> GetNoOfRequests()
+        //{
+        //    var data = _userRequestService.GetNoOfRequests();
+          
+        //    return data;
+        //}
     }
 }

@@ -18,10 +18,30 @@ namespace E_Library.DataModels.Repository
             _LibraryManagementContext = e_LibraryManagementContext;
         }
 
+        //public async Task<int> CountRequests(UserRequest userRequest)
+        //{
+            
+        //    //var QSCount = (from num in intNumbers
+        //    //               select num).Count();
+        //}
+
+     
+
         public async Task<IEnumerable<UserRequest>> GetAllRequests()
         {
             var data=await  _LibraryManagementContext.UserRequests.ToListAsync();
             return data;
+        }
+
+        public  int GetNoOfRequests()
+        {
+            var data = _LibraryManagementContext.UserRequests.Select(x => x.RequestId).Count();
+            if(data != null)
+            {
+                return data;
+            }
+            return 0;
+            
         }
 
         public async Task<int> MakeRequest(UserRequest urequest)

@@ -14,5 +14,6 @@ namespace E_Library.DataModels.Repository.Interface
         public bool UpdateRequest(UserRequest urequest);
 
         public Task<IEnumerable<UserRequest>> GetAllRequests();
+        public int GetNoOfRequests();
     }
 }

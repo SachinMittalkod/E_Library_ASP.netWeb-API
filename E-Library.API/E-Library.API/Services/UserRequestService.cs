@@ -18,16 +18,24 @@ namespace E_Library.API.Services
             return await _userRequestRepository.GetAllRequests();
         }
 
+        public  int GetNoOfRequests()
+        {
+            return _userRequestRepository.GetNoOfRequests();
+        }
+
         public Task<int> MakeRequest(UserRequest urequest)
         {
-           return _userRequestRepository.MakeRequest(urequest);
-          
-            
+           return _userRequestRepository.MakeRequest(urequest);    
         }
+
+
+        
 
         public bool UpdateRequest(UserRequest urequest)
         {
             return _userRequestRepository.UpdateRequest(urequest);
         }
+
+        
     }
 }

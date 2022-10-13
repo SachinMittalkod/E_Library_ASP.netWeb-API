@@ -67,7 +67,7 @@ namespace E_Library.API.Controllers
             return await _bookService.AddBook(bookDetail);      
         }
 
-        [HttpPatch("{id}")]
+        [HttpPut("{id}")]
         public ActionResult UpdateBook(int id, [FromForm] BookDTO updatebookDTO)
         {
             if (updatebookDTO == null)
