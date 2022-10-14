@@ -5,10 +5,10 @@ namespace E_Library.DataModels.entities
 {
     public partial class BookDetail
     {
-        //public BookDetail()
-        //{
-        //    UserRequests = new HashSet<UserRequest>();
-        //}
+        public BookDetail()
+        {
+            UserRequests = new HashSet<UserRequest>();
+        }
 
         public int BookId { get; set; }
         public string? BookName { get; set; }
@@ -17,7 +17,7 @@ namespace E_Library.DataModels.entities
         public string? ImageUrl { get; set; }
         public int? UserId { get; set; }
 
-        //public virtual User? User { get; set; }
-        //public virtual ICollection<UserRequest> UserRequests { get; set; }
+        public virtual User? User { get; set; }
+        public virtual ICollection<UserRequest> UserRequests { get; set; }
     }
 }

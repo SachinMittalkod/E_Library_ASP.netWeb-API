@@ -53,10 +53,10 @@ namespace E_Library.DataModels.entities
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
 
-                //entity.HasOne(d => d.User)
-                //    .WithMany(p => p.BookDetails)
-                //    .HasForeignKey(d => d.UserId)
-                //    .HasConstraintName("FK__BookDetai__UserI__403A8C7D");
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.BookDetails)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__BookDetai__UserI__403A8C7D");
             });
 
             modelBuilder.Entity<CheckRole>(entity =>
@@ -108,15 +108,15 @@ namespace E_Library.DataModels.entities
 
                 entity.Property(e => e.Date).HasColumnType("date");
 
-                //entity.HasOne(d => d.Book)
-                //    .WithMany(p => p.UserRequests)
-                //    .HasForeignKey(d => d.BookId)
-                //    .HasConstraintName("fk__userreque__booki__60a75c0f");
+                entity.HasOne(d => d.Book)
+                    .WithMany(p => p.UserRequests)
+                    .HasForeignKey(d => d.BookId)
+                    .HasConstraintName("FK__UserReque__BookI__60A75C0F");
 
-                //entity.HasOne(d => d.User)
-                //    .WithMany(p => p.UserRequests)
-                //    .HasForeignKey(d => d.UserId)
-                //    .HasConstraintName("fk__userreque__useri__5fb337d6");
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.UserRequests)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__UserReque__UserI__5FB337D6");
             });
 
             OnModelCreatingPartial(modelBuilder);

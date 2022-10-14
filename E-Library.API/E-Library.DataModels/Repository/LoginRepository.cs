@@ -26,15 +26,12 @@ namespace E_Library.DataModels.Repository
             
         }
 
-        public async Task<User> LoginUser(User user)
+        public async Task<User> LoginUser(User login)
         {
-            User UserData = await _e_LibraryManagementContext.Users.FirstOrDefaultAsync(x => x.Name == user.Name && 
-            x.Password == user.Password);
+            User user = await _e_LibraryManagementContext.Users.FirstOrDefaultAsync(x => x.Name == login.Name && x.Password == login.Password);
 
-            return UserData;
-                
+            return user;
+
         }
-
-        
     }
 }

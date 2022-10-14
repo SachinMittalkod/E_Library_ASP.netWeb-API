@@ -34,7 +34,7 @@ namespace E_Library.DataModels.Repository
 
         public bool UpdateBook(BookDetail bookDetail)
         {
-            _LibraryManagementContext.Update(bookDetail);
+           _LibraryManagementContext.Update(bookDetail);
             return Save();
         }
 

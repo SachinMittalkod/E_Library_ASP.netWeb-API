@@ -10,6 +10,10 @@ namespace E_Library.DataModels.Repository.Interface
 {
     public interface ILoginRepository
     {
-        public Task<User> LoginUser(User login);
+       
+        Task<User> LoginUser(User login);
+        //bool CheckUserAvailabity(string userName);
+
+        //bool isUserExists(int userId);
     }
 }

@@ -18,12 +18,7 @@ namespace E_Library.DataModels.Repository
             _LibraryManagementContext = e_LibraryManagementContext;
         }
 
-        //public async Task<int> CountRequests(UserRequest userRequest)
-        //{
-            
-        //    //var QSCount = (from num in intNumbers
-        //    //               select num).Count();
-        //}
+    
 
      
 

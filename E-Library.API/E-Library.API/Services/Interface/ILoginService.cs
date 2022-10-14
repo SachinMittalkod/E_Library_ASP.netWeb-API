@@ -5,6 +5,9 @@ namespace E_Library.API.Services.Interface
 {
     public interface ILoginService
     {
-        public Task<User> LoginUser(User user);
+        Task<User> LoginUser(User login);      
+        //bool CheckUserAvailabity(string userName);
+
+        //bool isUserExists(int userId);
     }
 }

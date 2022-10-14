@@ -7,8 +7,5 @@ namespace E_Library.DataModels.entities
     {
         public string? Role { get; set; }
         public int RoleId { get; set; }
-
-        //public const string admin = "1";
-        //public const string user = "2";
     }
 }

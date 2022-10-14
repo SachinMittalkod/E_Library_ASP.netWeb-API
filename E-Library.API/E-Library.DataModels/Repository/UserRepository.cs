@@ -11,8 +11,6 @@ using System.Threading.Tasks;
 
 namespace E_Library.DataModels.Repository
 {
-   
-
     public class UserRepository : IUserRepository
     {
         private readonly E_LibraryManagementContext _LibraryManagementContext;
