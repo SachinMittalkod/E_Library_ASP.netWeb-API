@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "2D6uRnFGkebAPbO1AaPXlv4UtGRBmcCyI2V5WYPfbmk=",
+  "Source": "E-LibraryManagementSystem.API",
+  "BasePath": "_content/E-LibraryManagementSystem.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

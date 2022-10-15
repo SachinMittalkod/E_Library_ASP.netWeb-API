@@ -1,0 +1,17 @@
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\bin\Debug\net6.0\E-LibraryManagementSystem.DataModel.deps.json
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\bin\Debug\net6.0\E-LibraryManagementSystem.DataModel.runtimeconfig.json
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\bin\Debug\net6.0\E-LibraryManagementSystem.DataModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\bin\Debug\net6.0\E-LibraryManagementSystem.DataModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.csproj.AssemblyReference.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.AssemblyInfoInputs.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.AssemblyInfo.cs
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.csproj.CoreCompileInputs.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\refint\E-LibraryManagementSystem.DataModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.genruntimeconfig.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\ref\E-LibraryManagementSystem.DataModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\bin\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\bin\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API.DataModel\obj\Debug\net6.0\E-LibraryManagementSystem.DataModel.csproj.CopyComplete

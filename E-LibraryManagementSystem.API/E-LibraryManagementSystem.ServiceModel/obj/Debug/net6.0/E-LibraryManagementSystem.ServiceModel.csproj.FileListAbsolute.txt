@@ -1,0 +1,12 @@
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\bin\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.deps.json
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\bin\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\bin\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.csproj.AssemblyReference.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.AssemblyInfoInputs.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.AssemblyInfo.cs
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.csproj.CoreCompileInputs.cache
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\refint\E-LibraryManagementSystem.ServiceModel.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\E-LibraryManagementSystem.ServiceModel.pdb
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.ServiceModel\obj\Debug\net6.0\ref\E-LibraryManagementSystem.ServiceModel.dll

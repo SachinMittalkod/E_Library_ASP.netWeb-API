@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\E-Library.API",
-    "\\E-Library.API\\Services",
-    "\\E-Library.API\\Services\\Interface",
-    "\\E-Library.ServiceModel"
+    "\\E-Library.API\\Services\\Interface"
   ],
   "SelectedNode": "\\E-Library.API.sln",
   "PreviewInSolutionExplorer": false
