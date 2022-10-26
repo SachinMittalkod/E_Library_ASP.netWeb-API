@@ -29,16 +29,16 @@ namespace E_Library.DataModels.Repository
             return 1;
         }
 
-        public bool Save()
+        public async Task<bool> Save()
         {
-            var saved = _LibraryManagementContext.SaveChanges();
+            var saved = await _LibraryManagementContext.SaveChangesAsync();
             return saved > 0 ? true : false;
         }
 
-        public  bool UpdateUser(User user)
+        public async  Task<bool> UpdateUser(User user)
         {
              _LibraryManagementContext.Update(user);
-             return Save();
+             return await Save();
         }
 
         public async Task<int> DeleteUser(int id)
@@ -58,13 +58,6 @@ namespace E_Library.DataModels.Repository
             return data;
         }
 
-        //public async Task<User> LoginUser(User user)
-        //{
-        //    User UserData = await _LibraryManagementContext.Users.FirstOrDefaultAsync(x => x.Name == user.Name &&
-        //    x.Password == user.Password);
-
-        //    return UserData;
-
-        //}
+    
     }
 }

@@ -8,7 +8,7 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
         public BookDetail()
         {
             IssuedBooks = new HashSet<IssuedBook>();
-            UserRequests = new HashSet<UserRequest>();
+            RequestedBooks = new HashSet<RequestedBook>();
         }
 
         public int BookId { get; set; }
@@ -16,10 +16,8 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
         public string? AuthorName { get; set; }
         public DateTime? Date { get; set; }
         public string? ImageUrl { get; set; }
-        public int? UserId { get; set; }
 
-        public virtual User? User { get; set; }
         public virtual ICollection<IssuedBook> IssuedBooks { get; set; }
-        public virtual ICollection<UserRequest> UserRequests { get; set; }
+        public virtual ICollection<RequestedBook> RequestedBooks { get; set; }
     }
 }

@@ -29,17 +29,13 @@ namespace E_Library.API.Services
             return 1;
         }
 
-        public bool UpdateUser(User user)
+        public async Task<bool> UpdateUser(User user)
         {
-            _userRepository.UpdateUser(user);
+            await _userRepository.UpdateUser(user);
             return true;
         }
 
-        //public async Task<User> LoginUser(User user)
-        //{
-        //    return await _userRepository.LoginUser(user);
-        //}
-
+       
 
     }
 }

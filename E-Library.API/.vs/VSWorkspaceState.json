@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\E-Library.API\\Services\\Interface"
+    "\\E-Library.API"
   ],
-  "SelectedNode": "\\E-Library.API.sln",
+  "SelectedNode": "\\E-Library.API\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

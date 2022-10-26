@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using E_Library.API.Services;
 using E_LibraryManagementSystem.API.DataModel.Entities;
 using E_LibraryManagementSystem.API.Services.Interface;
 using E_LibraryManagementSystem.ServiceModel.DTO.Request;
@@ -9,6 +10,7 @@ namespace E_LibraryManagementSystem.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class BookController : ControllerBase
     {
         private readonly IBookService _bookService;
@@ -21,21 +23,23 @@ namespace E_LibraryManagementSystem.API.Controllers
         }
 
         [HttpGet("{id}")]
+        //[Authorize(Policy = UserRoles.User)]
         public async Task<ActionResult<BookDTO>> GetBookById(int id)
         {
-            var book =await _bookService.GetBookById(id);
-            if(book == null)
+            var book = await _bookService.GetBookById(id);
+            if (book == null)
             {
-                return NotFound("The Entered ID not found");  
+                return NotFound("The Entered ID not found");
             }
             return Ok(book);
         }
 
         [HttpGet]
-        [Authorize]
+        [Route("GetBookDetails")]
+       //[Authorize(Policy = UserRoles.Admin)]
         public async Task<ActionResult<IEnumerable<BookDetail>>> GetBookDetails()
         {
-            var data=await _bookService.GetAllBookDetails();
+            var data = await _bookService.GetAllBookDetails();
             if (data == null)
             {
                 return BadRequest();
@@ -46,29 +50,37 @@ namespace E_LibraryManagementSystem.API.Controllers
             }
         }
 
-        [HttpPost]
-      
-        public async  Task<ActionResult<int>> PostBook([FromForm] BookDTO bookDTO)
+        [HttpPost] 
+        //[Route("api/PostBook")]
+        public async  Task<ActionResult<int>> PostBook([FromBody] BookDTO bookDTO)
         {
-            //var request=_mapper.Map<BookDetail>(book);
-            //var requestdata = _bookService.AddBook(request);
-            //var mapRequest=_mapper.Map<BookDTO>(request);
 
-            var bookDetail = new BookDetail
+
+            //var bookDetail = new BookDetail
+            //{
+            //    //BookId = bookDTO.BookId,
+            //    AuthorName = bookDTO.AuthorName,
+            //    BookName = bookDTO.BookName,
+            //    Date = bookDTO.Date,
+            //    ImageUrl = bookDTO.ImageUrl,
+            //    UserId = bookDTO.UserId
+
+            //};
+            //return await _bookService.AddBook(bookDetail);
+            var request = _mapper.Map<BookDetail>(bookDTO);
+            var responce = await _bookService.AddBook(request);
+            var mapping = _mapper.Map<BookDTO>(request);
+
+            if (mapping == null)
             {
-                BookId = bookDTO.BookId,
-                AuthorName = bookDTO.AuthorName,
-                BookName = bookDTO.BookName,
-                Date = bookDTO.Date,
-                ImageUrl = bookDTO.ImageUrl,
-                UserId = bookDTO.UserId
-             
-            };
-            return await _bookService.AddBook(bookDetail);      
+                return BadRequest();
+            }
+            return Ok(responce);
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateBook(int id, [FromForm] BookDTO updatebookDTO)
+       
+        public async Task<ActionResult<bool>> UpdateBook(int id, [FromForm] BookDTO updatebookDTO)
         {
             if (updatebookDTO == null)
             {
@@ -76,14 +88,15 @@ namespace E_LibraryManagementSystem.API.Controllers
                 return BadRequest();
             }
 
-            if (id != updatebookDTO.BookId)
-            {
-                return BadRequest(ModelState);
-            }
+            //if (id != updatebookDTO.BookId)
+            //{
+            //    return BadRequest(ModelState);
+            //}
+
 
             var mapping = _mapper.Map<BookDetail>(updatebookDTO);
                 
-            if (!_bookService.UpdateBook(mapping))
+            if (!await _bookService.UpdateBook(mapping))
             {
                 ModelState.AddModelError("", "Something went wrong updating category");
                 return StatusCode(500, ModelState);
@@ -92,9 +105,10 @@ namespace E_LibraryManagementSystem.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public ActionResult DeleteBook(int id)
+
+        public async Task<ActionResult> DeleteBook(int id)
         {
-            _bookService.DeleteBook(id);
+           await _bookService.DeleteBook(id);
             return Ok();
         }
     }

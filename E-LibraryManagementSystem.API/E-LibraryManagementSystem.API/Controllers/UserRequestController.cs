@@ -21,7 +21,7 @@ namespace E_LibraryManagementSystem.API.Controllers
 
         [HttpGet]   
 
-        public async Task<ActionResult<IEnumerable<UserRequest>>> GetAllRequests()
+        public async Task<ActionResult<IEnumerable<RequestedBook>>> GetAllRequests()
         {
             var data= await _userRequestService.GetAllRequests();
             if(data==null)
@@ -32,12 +32,13 @@ namespace E_LibraryManagementSystem.API.Controllers
         }
 
         [HttpPost]
+        [Route("PostRequest")]
         //MakeRequest Method
-        public ActionResult<int> PostRequest([FromForm]UserRequestDTO userRequest)
+        public ActionResult<int> PostRequest([FromBody] RequestedBookDTO userRequest)
         {
-            var data=_mapper.Map<UserRequest>(userRequest);
+            var data=_mapper.Map<RequestedBook>(userRequest);
             var response= _userRequestService.MakeRequest(data);
-            var mapping=_mapper.Map<UserRequestDTO>(data);
+            var mapping=_mapper.Map<RequestedBookDTO>(data);
             if(mapping == null)
             {
                 return BadRequest();
@@ -47,34 +48,9 @@ namespace E_LibraryManagementSystem.API.Controllers
 
      
 
-        [HttpPut("{id}")]
-        public ActionResult UpdateRequest(int id, [FromForm]UserRequestDTO userRequestDTO)
-        {
-            if (userRequestDTO == null)
-            {
-                return BadRequest();
-            }
-            if (id != userRequestDTO.RequestId)
-            {
-                return BadRequest(ModelState);
-            }
-            var mapping = _mapper.Map<UserRequest>(userRequestDTO);
+   
+ 
 
-            if (!_userRequestService.UpdateRequest(mapping))
-            {
-                ModelState.AddModelError("", "Something went wrong updating category");
-                return StatusCode(500, ModelState);
-            }
-            return NoContent();
-        }
-
-        //[HttpGet]
-
-        //public ActionResult<int> GetNoOfRequests()
-        //{
-        //    var data = _userRequestService.GetNoOfRequests();
-          
-        //    return data;
-        //}
+   
     }
 }

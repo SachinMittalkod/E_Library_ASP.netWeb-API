@@ -9,9 +9,9 @@ namespace E_Library.DataModels.Repository.Interface
 
         public Task<BookDetail> GetBookById(int id);
         Task<int> AddBook(BookDetail bookDetail);
-        public bool UpdateBook(BookDetail bookDetail);
+        public Task<bool> UpdateBook(BookDetail bookDetail);
         public Task<int> DeleteBook(int id);
-        bool Save();
+        Task<bool> Save();
 
         
     }

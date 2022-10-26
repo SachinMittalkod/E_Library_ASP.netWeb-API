@@ -12,8 +12,6 @@ namespace E_Library.DataModels.Repository.Interface
     {
        
         Task<User> LoginUser(User login);
-        //bool CheckUserAvailabity(string userName);
-
-        //bool isUserExists(int userId);
+       
     }
 }

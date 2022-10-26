@@ -19,8 +19,8 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
         public virtual DbSet<BookDetail> BookDetails { get; set; } = null!;
         public virtual DbSet<CheckRole> CheckRoles { get; set; } = null!;
         public virtual DbSet<IssuedBook> IssuedBooks { get; set; } = null!;
+        public virtual DbSet<RequestedBook> RequestedBooks { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
-        public virtual DbSet<UserRequest> UserRequests { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -36,9 +36,9 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
             modelBuilder.Entity<BookDetail>(entity =>
             {
                 entity.HasKey(e => e.BookId)
-                    .HasName("PK__BookDeta__3DE0C20717F250D3");
+                    .HasName("PK__BookDeta__3DE0C2075A314EDA");
 
-                entity.Property(e => e.BookId).ValueGeneratedNever();
+                entity.ToTable("BookDetail");
 
                 entity.Property(e => e.AuthorName)
                     .HasMaxLength(60)
@@ -51,13 +51,6 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
                 entity.Property(e => e.Date).HasColumnType("date");
 
                 entity.Property(e => e.ImageUrl).IsUnicode(false);
-
-                entity.Property(e => e.UserId).HasColumnName("UserID");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.BookDetails)
-                    .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__BookDetai__UserI__403A8C7D");
             });
 
             modelBuilder.Entity<CheckRole>(entity =>
@@ -75,7 +68,7 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
             modelBuilder.Entity<IssuedBook>(entity =>
             {
                 entity.HasKey(e => e.IssueId)
-                    .HasName("PK__IssuedBo__6C861604B4DDEF04");
+                    .HasName("PK__IssuedBo__6C861604532B6E62");
 
                 entity.ToTable("IssuedBook");
 
@@ -83,18 +76,40 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
 
                 entity.Property(e => e.ReturnDate).HasColumnType("date");
 
+                entity.HasOne(d => d.Book)
+                    .WithMany(p => p.IssuedBooks)
+                    .HasForeignKey(d => d.BookId)
+                    .HasConstraintName("FK__IssuedBoo__BookI__2A164134");
+
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.IssuedBooks)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__IssuedBoo__UserI__6754599E");
+                    .HasConstraintName("FK__IssuedBoo__UserI__29221CFB");
+            });
+
+            modelBuilder.Entity<RequestedBook>(entity =>
+            {
+                entity.HasKey(e => e.RequestId);
+
+                entity.ToTable("RequestedBook");
+
+                entity.Property(e => e.RequestDate).HasColumnType("date");
+
+                entity.HasOne(d => d.Book)
+                    .WithMany(p => p.RequestedBooks)
+                    .HasForeignKey(d => d.BookId)
+                    .HasConstraintName("FK__Requested__BookI__2DE6D218");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.RequestedBooks)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__Requested__UserI__2EDAF651");
             });
 
             modelBuilder.Entity<User>(entity =>
             {
                 entity.HasIndex(e => e.Email, "UQ__Users__A9D10534607F9038")
                     .IsUnique();
-
-                entity.Property(e => e.UserId).ValueGeneratedNever();
 
                 entity.Property(e => e.Email)
                     .HasMaxLength(80)
@@ -115,26 +130,6 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .HasColumnName("password");
-            });
-
-            modelBuilder.Entity<UserRequest>(entity =>
-            {
-                entity.HasKey(e => e.RequestId)
-                    .HasName("PK__UserRequ__33A8517A47CD2F98");
-
-                entity.Property(e => e.RequestId).ValueGeneratedNever();
-
-                entity.Property(e => e.Date).HasColumnType("date");
-
-                entity.HasOne(d => d.Book)
-                    .WithMany(p => p.UserRequests)
-                    .HasForeignKey(d => d.BookId)
-                    .HasConstraintName("FK__UserReque__BookI__60A75C0F");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.UserRequests)
-                    .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__UserReque__UserI__5FB337D6");
             });
 
             OnModelCreatingPartial(modelBuilder);

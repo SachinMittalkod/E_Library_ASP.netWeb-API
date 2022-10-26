@@ -35,6 +35,7 @@ namespace E_LibraryManagementSystem.API.Controllers
         }
 
         [HttpPost]
+        [Route("loginUser")]
         public async Task<ActionResult> LoginUser([FromBody] LoginDTO loginDTO)
         {
             var libUser = new User
@@ -47,8 +48,9 @@ namespace E_LibraryManagementSystem.API.Controllers
 
             if (user != null)
             {
-                var token = _tokenRepository.CreateToken(user);
-                return Ok(token);
+               // var token = _tokenRepository.CreateToken(user);
+              //  return Ok(token);
+                return Ok("Login successfullyyyyyy");
             }
             else
             {

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace E_LibraryManagementSystem.ServiceModel.DTO.Request
 {
-    public class UserRequestDTO
+    public class RequestedBookDTO
     {
-        public int? RequestId { get; set; }
-        public int? UserId { get; set; }
-        public DateTime? Date { get; set; }
+       // public int RequestId { get; set; }
         public int? BookId { get; set; }
+        public int? UserId { get; set; }
+        public DateTime? RequestDate { get; set; }
     }
 }

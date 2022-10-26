@@ -19,7 +19,7 @@ namespace E_LibraryManagementSystem.API.Controllers
         }
 
         [HttpPost]
-        public async  Task<ActionResult<int>> RegisterUser([FromForm]UserDTO userDTO)
+        public async  Task<ActionResult<int>> RegisterUser([FromBody]UserDTO userDTO)
         {
             var request = _mapper.Map<User>(userDTO);
             var responce=await _userService.RegisterUser(request);
@@ -33,25 +33,30 @@ namespace E_LibraryManagementSystem.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public  ActionResult UpdateUser(int id,[FromForm]UserDTO userDTO)
+        
+        public async Task<ActionResult> UpdateUser(int id,[FromBody]UserDTO userDTO)
         {
             if(userDTO == null)
             {
-                return BadRequest();
-            }
-            if(id != userDTO.UserId)
-            {
                 return BadRequest(ModelState);
             }
+            if (id == null)
+                return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            //if (id != userDTO.UserId)
+            //{
+            //    return BadRequest(ModelState);
+            //}
             var mapping=_mapper.Map<User>(userDTO);
 
-            if (!_userService.UpdateUser(mapping))
+            if (! await _userService.UpdateUser(mapping))
             {
                 ModelState.AddModelError("", "Something went wrong updating category");
                 return StatusCode(500, ModelState);
 
             }
-            return NoContent();
+            return Ok("Updated Successfully");
         }
 
         [HttpDelete("{id}")]
@@ -77,24 +82,5 @@ namespace E_LibraryManagementSystem.API.Controllers
 
         }
 
-        //[HttpPost]
-        //public async Task<ActionResult<string>> LoginUser([FromForm] User logindata)
-        //{
-        //    var data = new User
-        //    {
-        //        Name = logindata.Name,
-        //        Password = logindata.Password
-        //    };
-
-        //    var result = await _userService.LoginUser(data);
-        //    if (result != null)
-        //    {
-        //        return "Login Success";
-        //    }
-        //    else
-        //    {
-        //        return "Invalid credentials or Enter Values";
-        //    }
-        //}
     }
 }

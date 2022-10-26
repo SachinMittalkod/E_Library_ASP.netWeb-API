@@ -11,6 +11,7 @@ namespace E_LibraryManagementSystem.API.DataModel.Entities
         public DateTime? IssueDate { get; set; }
         public DateTime? ReturnDate { get; set; }
 
-        public virtual BookDetail? User { get; set; }
+        public virtual BookDetail? Book { get; set; }
+        public virtual User? User { get; set; }
     }
 }

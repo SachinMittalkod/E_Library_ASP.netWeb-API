@@ -69,3 +69,6 @@ C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-Library
 C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API\obj\Debug\net6.0\E-LibraryManagementSystem.API.pdb
 C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API\obj\Debug\net6.0\E-LibraryManagementSystem.API.genruntimeconfig.cache
 C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API\obj\Debug\net6.0\ref\E-LibraryManagementSystem.API.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API\bin\Debug\net6.0\MailKit.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API\bin\Debug\net6.0\MimeKit.dll
+C:\ASPnetWebApi\E_Library_ASP.netWeb-API\E-LibraryManagementSystem.API\E-LibraryManagementSystem.API\bin\Debug\net6.0\BouncyCastle.Crypto.dll

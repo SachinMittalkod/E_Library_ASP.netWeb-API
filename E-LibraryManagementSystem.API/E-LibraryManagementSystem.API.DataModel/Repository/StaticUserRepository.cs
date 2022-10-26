@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_LibraryManagementSystem.ServiceModel.DTO.Request
+namespace E_LibraryManagementSystem.API.DataModel.Repository
 {
-    internal class Class1
+    public class StaticUserRepository
     {
     }
 }

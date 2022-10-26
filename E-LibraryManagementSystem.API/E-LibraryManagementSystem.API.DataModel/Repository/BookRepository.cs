@@ -27,16 +27,16 @@ namespace E_Library.DataModels.Repository
 
      
 
-        public bool Save()
+        public async Task<bool> Save()
         {
-            var saved = _LibraryManagementContext.SaveChanges();
-            return saved > 0 ? true : false;
+            var saved =await _LibraryManagementContext.SaveChangesAsync();
+            return  saved > 0 ? true : false;
         }
 
-        public bool UpdateBook(BookDetail bookDetail)
+        public async Task<bool> UpdateBook(BookDetail bookDetail)
         {
            _LibraryManagementContext.Update(bookDetail);
-            return Save();
+            return await Save();
         }
 
         public async  Task<int> DeleteBook(int id)

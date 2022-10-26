@@ -13,7 +13,7 @@ namespace E_Library.API.Services
             _userRequestRepository = userRequestRepository;
         }
 
-        public async Task<IEnumerable<UserRequest>> GetAllRequests()
+        public async Task<IEnumerable<RequestedBook>> GetAllRequests()
         {
             return await _userRequestRepository.GetAllRequests();
         }
@@ -23,17 +23,9 @@ namespace E_Library.API.Services
             return _userRequestRepository.GetNoOfRequests();
         }
 
-        public Task<int> MakeRequest(UserRequest urequest)
+        public Task<int> MakeRequest(RequestedBook urequest)
         {
            return _userRequestRepository.MakeRequest(urequest);    
-        }
-
-
-        
-
-        public bool UpdateRequest(UserRequest urequest)
-        {
-            return _userRequestRepository.UpdateRequest(urequest);
         }
 
         

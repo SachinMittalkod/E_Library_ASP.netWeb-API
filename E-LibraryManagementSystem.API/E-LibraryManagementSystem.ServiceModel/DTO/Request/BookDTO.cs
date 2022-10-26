@@ -15,7 +15,7 @@ namespace E_LibraryManagementSystem.ServiceModel.DTO.Request
         public string? AuthorName { get; set; }
         public DateTime? Date { get; set; }
         public string? ImageUrl { get; set; }
-        public int? UserId { get; set; }
+        //public int? UserId { get; set; }
        
     }
 }
