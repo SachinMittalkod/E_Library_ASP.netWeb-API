@@ -33,10 +33,24 @@ namespace E_Library.DataModels.Repository
             return  saved > 0 ? true : false;
         }
 
-        public async Task<bool> UpdateBook(BookDetail bookDetail)
+        public async Task<bool> UpdateBook(BookDetail bookDetail, int id)
         {
-           _LibraryManagementContext.Update(bookDetail);
-            return await Save();
+            var data = await _LibraryManagementContext.BookDetails.FindAsync(id);
+            if(data == null)
+            {
+                return false;
+            }
+            else
+            {
+                data.BookName = bookDetail.BookName;
+                data.AuthorName = bookDetail.AuthorName;
+                data.Date = bookDetail.Date;
+                data.ImageUrl = bookDetail.ImageUrl;
+                _LibraryManagementContext.Entry(data).State = EntityState.Modified;
+                await _LibraryManagementContext.SaveChangesAsync();
+            }
+          //  _LibraryManagementContext.Update(bookDetail);
+            return true;
         }
 
         public async  Task<int> DeleteBook(int id)

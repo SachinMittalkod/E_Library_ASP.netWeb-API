@@ -20,9 +20,9 @@ namespace E_Library.API.Services
          return await _bookRepository.AddBook(bookDetail);
         }
 
-        public async Task<bool> UpdateBook(BookDetail bookDetail)
+        public async Task<bool> UpdateBook(BookDetail bookDetail, int id)
         {
-            return await _bookRepository.UpdateBook(bookDetail);
+            return await _bookRepository.UpdateBook(bookDetail, id);
         }
 
         public async Task<int> DeleteBook(int id)

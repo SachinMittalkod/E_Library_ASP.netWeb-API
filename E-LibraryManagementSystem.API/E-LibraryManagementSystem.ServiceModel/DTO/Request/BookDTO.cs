@@ -10,7 +10,7 @@ namespace E_LibraryManagementSystem.ServiceModel.DTO.Request
 {
     public class BookDTO
     {
-        public int BookId { get; set; }
+       // public int BookId { get; set; }
         public string? BookName { get; set; }
         public string? AuthorName { get; set; }
         public DateTime? Date { get; set; }

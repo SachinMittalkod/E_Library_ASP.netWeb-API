@@ -78,9 +78,9 @@ namespace E_LibraryManagementSystem.API.Controllers
             return Ok(responce);
         }
 
+     
         [HttpPut("{id}")]
-       
-        public async Task<ActionResult<bool>> UpdateBook(int id, [FromForm] BookDTO updatebookDTO)
+        public async Task<ActionResult<bool>> UpdateBook([FromBody] BookDTO updatebookDTO, int id)
         {
             if (updatebookDTO == null)
             {
@@ -94,14 +94,26 @@ namespace E_LibraryManagementSystem.API.Controllers
             //}
 
 
-            var mapping = _mapper.Map<BookDetail>(updatebookDTO);
-                
-            if (!await _bookService.UpdateBook(mapping))
+            var response = _mapper.Map<BookDetail>(updatebookDTO);
+            var requestNew = await _bookService.UpdateBook(response, id);
+
+            var bookDetails = _mapper.Map<BookDTO>(response);
+
+            //if (!await _bookService.UpdateBook(mapping))
+            //{
+            //    ModelState.AddModelError("", "Something went wrong updating category");
+            //    return StatusCode(500, ModelState);
+            //}
+            //return NoContent();
+            if (updatebookDTO == null)
             {
-                ModelState.AddModelError("", "Something went wrong updating category");
-                return StatusCode(500, ModelState);
+                return BadRequest("no data found");
             }
-            return NoContent();
+            else
+            {
+
+                return Ok("update successfully");
+            }
         }
 
         [HttpDelete("{id}")]
