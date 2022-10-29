@@ -36,8 +36,9 @@ namespace E_LibraryManagementSystem.API.Controllers
 
         [HttpPost]
         [Route("loginUser")]
-        public async Task<ActionResult> LoginUser([FromBody] LoginDTO loginDTO)
+        public async Task<IActionResult> LoginUser([FromBody] LoginDTO loginDTO)
         {
+            IActionResult response = Unauthorized();
             var libUser = new User
             {
                 Name = loginDTO.Name,
@@ -45,12 +46,19 @@ namespace E_LibraryManagementSystem.API.Controllers
             };
 
             var user = await _loginService.LoginUser(libUser);
-
+     
             if (user != null)
             {
-               // var token = _tokenRepository.CreateToken(user);
-              //  return Ok(token);
-                return Ok("Login successfullyyyyyy");
+                var token = _tokenRepository.CreateToken(user);
+                response = Ok(new
+                {
+                    token = token,
+                    userDetails = user,
+                });
+                //return Ok(token);
+                return response;
+             
+                return Ok("Login successfully");
             }
             else
             {

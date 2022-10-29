@@ -36,7 +36,7 @@ namespace E_LibraryManagementSystem.API.Controllers
 
         [HttpGet]
         [Route("GetBookDetails")]
-       //[Authorize(Policy = UserRoles.Admin)]
+        //[Authorize(Policy = UserRoles.Admin)]
         public async Task<ActionResult<IEnumerable<BookDetail>>> GetBookDetails()
         {
             var data = await _bookService.GetAllBookDetails();

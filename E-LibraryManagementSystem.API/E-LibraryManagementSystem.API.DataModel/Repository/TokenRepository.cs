@@ -23,7 +23,7 @@ namespace E_LibraryManagementSystem.API.DataModel.Repository
         {
             var claims = new List<Claim>() {
             new Claim(JwtRegisteredClaimNames.Sub, user.Name),
-              new Claim("userid", user.UserId.ToString()),
+              new Claim("userid", user.UserId.ToString(CultureInfo.InvariantCulture)),
                 new Claim("userTypeId", user.Name.ToString()),
                 new Claim(ClaimTypes.Role, user.RoleId.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
