@@ -43,7 +43,7 @@ namespace E_LibraryManagementSystem.API.Controllers
             {
                 return BadRequest();
             }
-            return Ok(response);
+            return Ok();
         }
 
      

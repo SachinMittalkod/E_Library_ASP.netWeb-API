@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using E_LibraryManagementSystem.API.DataModel.Helper;
+using E_LibraryManagementSystem.ServiceModel.DTO.Request;
+using E_LibraryManagementSystem.ServiceModel.DTO.Response;
 
 namespace E_Library.DataModels.Repository
 {
@@ -25,10 +27,26 @@ namespace E_Library.DataModels.Repository
 
      
 
-        public async Task<IEnumerable<RequestedBook>> GetAllRequests()
+        public async Task<IEnumerable<RespRequestedBookDTO>> GetAllRequests()
         {
-            var data=await  _LibraryManagementContext.RequestedBooks.ToListAsync();
-            return data;
+            //var data = await _LibraryManagementContext.RequestedBooks.ToListAsync();
+            //return data;
+
+            var reqListDTO = (from r in _LibraryManagementContext.RequestedBooks
+                              join b in _LibraryManagementContext.BookDetails on r.BookId equals b.BookId
+                              join u in _LibraryManagementContext.Users on r.UserId equals u.UserId
+
+                              select new RespRequestedBookDTO
+                              {
+                                  BookName=b.BookName,
+                                  UserId=u.UserId,
+                                  AuthorName = b.AuthorName,
+                                  ImageUrl=b.ImageUrl
+                              }).ToListAsync();
+
+
+            return await reqListDTO;
+
         }
 
         public  int GetNoOfRequests()

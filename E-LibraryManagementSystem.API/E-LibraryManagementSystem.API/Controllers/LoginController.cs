@@ -58,11 +58,11 @@ namespace E_LibraryManagementSystem.API.Controllers
                 //return Ok(token);
                 return response;
              
-                return Ok("Login successfully");
+                return Ok();
             }
             else
             {
-                return BadRequest("Login Failed Invalid Credential");
+                return BadRequest();
             }
 
         }

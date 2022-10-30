@@ -1,6 +1,7 @@
 ﻿using E_Library.DataModels.Repository.Interface;
 using E_LibraryManagementSystem.API.DataModel.Entities;
 using E_LibraryManagementSystem.API.Services.Interface;
+using E_LibraryManagementSystem.ServiceModel.DTO.Response;
 
 namespace E_Library.API.Services
 {
@@ -13,7 +14,7 @@ namespace E_Library.API.Services
             _userRequestRepository = userRequestRepository;
         }
 
-        public async Task<IEnumerable<RequestedBook>> GetAllRequests()
+        public async Task<IEnumerable<RespRequestedBookDTO>> GetAllRequests()
         {
             return await _userRequestRepository.GetAllRequests();
         }

@@ -1,5 +1,6 @@
 ﻿
 using E_LibraryManagementSystem.API.DataModel.Entities;
+using E_LibraryManagementSystem.ServiceModel.DTO.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace E_Library.DataModels.Repository.Interface
         public Task<int> MakeRequest(RequestedBook urequest);
  
 
-        public Task<IEnumerable<RequestedBook>> GetAllRequests();
+        public Task<IEnumerable<RespRequestedBookDTO>> GetAllRequests();
         public int GetNoOfRequests();
     }
 }
