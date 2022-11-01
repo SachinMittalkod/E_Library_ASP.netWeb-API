@@ -35,7 +35,7 @@ namespace E_LibraryManagementSystem.API.Controllers
         }
 
         [HttpPost]
-        [Route("loginUser")]
+        //[Route("loginUser")]
         public async Task<IActionResult> LoginUser([FromBody] LoginDTO loginDTO)
         {
             IActionResult response = Unauthorized();
@@ -58,11 +58,13 @@ namespace E_LibraryManagementSystem.API.Controllers
                 //return Ok(token);
                 return response;
              
-                return Ok();
+                return Ok("Login successfully");
             }
             else
             {
-                return BadRequest();
+                //var res = "Invalid Credentials";
+                //return Ok(new{res });
+                return NotFound();
             }
 
         }

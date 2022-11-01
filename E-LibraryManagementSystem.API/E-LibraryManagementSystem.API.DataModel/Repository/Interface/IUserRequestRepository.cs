@@ -15,6 +15,8 @@ namespace E_Library.DataModels.Repository.Interface
  
 
         public Task<IEnumerable<RespRequestedBookDTO>> GetAllRequests();
+
+        public Task<int> DeleteRequest(int id);
         public int GetNoOfRequests();
     }
 }

@@ -19,6 +19,13 @@ namespace E_LibraryManagementSystem.API.DataModel.Repository
             _LibraryManagementContext = e_LibraryManagementContext;
         }
 
+        public async Task<int> AcceptRequest(IssuedBook issuedBook)
+        {
+           await _LibraryManagementContext.IssuedBooks.AddAsync(issuedBook);
+            await _LibraryManagementContext.SaveChangesAsync();
+            return 1;
+        }
+
         public async Task<IEnumerable<IssuedBookDTO>> GetAllIssuedBook()
         {
             var issuedBooks = (from i in _LibraryManagementContext.IssuedBooks

@@ -11,5 +11,6 @@ namespace E_LibraryManagementSystem.API.Services.Interface
         public Task<int> MakeRequest(RequestedBook urequest);
      
         public int GetNoOfRequests();
+        public Task<int> DeleteRequest(int id);
     }
 }

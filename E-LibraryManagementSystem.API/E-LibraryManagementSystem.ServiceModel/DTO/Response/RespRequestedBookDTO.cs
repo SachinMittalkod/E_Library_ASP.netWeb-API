@@ -15,6 +15,9 @@ namespace E_LibraryManagementSystem.ServiceModel.DTO.Response
         public string AuthorName { get; set; }
         public string ImageUrl { get; set; }
         public string BookName { get; set; }
+        public  DateTime? IssueDate { get; set; }
+        public  DateTime? ReturnDate { get; set; }
+
         public DateTime? RequestDate { get; set; }
     }
 }

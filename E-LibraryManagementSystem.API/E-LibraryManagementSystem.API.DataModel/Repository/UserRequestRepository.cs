@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using E_LibraryManagementSystem.API.DataModel.Helper;
 using E_LibraryManagementSystem.ServiceModel.DTO.Request;
 using E_LibraryManagementSystem.ServiceModel.DTO.Response;
+using System.Net;
 
 namespace E_Library.DataModels.Repository
 {
@@ -35,13 +36,19 @@ namespace E_Library.DataModels.Repository
             var reqListDTO = (from r in _LibraryManagementContext.RequestedBooks
                               join b in _LibraryManagementContext.BookDetails on r.BookId equals b.BookId
                               join u in _LibraryManagementContext.Users on r.UserId equals u.UserId
+                              //join i in _LibraryManagementContext.IssuedBooks on r.BookId equals i.BookId
 
                               select new RespRequestedBookDTO
                               {
                                   BookName=b.BookName,
                                   UserId=u.UserId,
                                   AuthorName = b.AuthorName,
-                                  ImageUrl=b.ImageUrl
+                                  ImageUrl=b.ImageUrl,
+                                  BookId=b.BookId,
+                                 // IssueDate=i.IssueDate,
+                                  Name=u.Name,
+                                //ReturnDate=i.ReturnDate,
+                                  RequestId=r.RequestId
                               }).ToListAsync();
 
 
@@ -63,34 +70,47 @@ namespace E_Library.DataModels.Repository
         public async Task<int> MakeRequest(RequestedBook urequest)
         {
 
-            status = 1;
-            var requestAdded = await _LibraryManagementContext.RequestedBooks.AddAsync(urequest);
-            var userEmail = _LibraryManagementContext.Users.Where(u => u.UserId == urequest.UserId).Select(s => s.Email).FirstOrDefault();
+            //status = 1;
+           await _LibraryManagementContext.RequestedBooks.AddAsync(urequest);
+            //var userEmail = _LibraryManagementContext.Users.Where(u => u.UserId == urequest.UserId).Select(s => s.Email).FirstOrDefault();
             //var adminEmail = _LibraryManagementContext.Users.Where(a => a.RoleId == 1).Select(x => x.Email).FirstOrDefault();
 
             //string sender =Convert.ToString(userEmail);
             //string receiver = Convert.ToString(adminEmail);
             
-            string receiver = Convert.ToString(userEmail);
-            string sender = "sachinmittalkod@gmail.com";
+           // string receiver = Convert.ToString(userEmail);
+           // string sender = "sachinmittalkod@gmail.com";
             
 
             
 
-            EmailService.smtpMailer(status,  sender, receiver, "");
+           // EmailService.smtpMailer(status,  sender, receiver, "");
             await _LibraryManagementContext.SaveChangesAsync();
             return 1;
 
 
         }
 
-        public bool UpdateRequest(RequestedBook urequest)
-        {
+        //public bool UpdateRequest(RequestedBook urequest)
+        //{
           
-            _LibraryManagementContext.Update(urequest);
-            _LibraryManagementContext.SaveChanges();
-            return true;
-        }
+        //    _LibraryManagementContext.Update(urequest);
+        //    _LibraryManagementContext.SaveChanges();
+        //    return true;
+        //}
 
+        public async Task<int> DeleteRequest(int id)
+        {
+            var data = await _LibraryManagementContext.RequestedBooks.FindAsync(id);
+            if (data == null)
+            {
+                return 0;
+            }
+            else
+            _LibraryManagementContext.Remove(data);
+           await _LibraryManagementContext.SaveChangesAsync();
+         
+            return 1;
+        }
     }
 }

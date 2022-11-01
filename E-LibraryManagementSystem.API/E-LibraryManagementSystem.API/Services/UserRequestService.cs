@@ -14,6 +14,11 @@ namespace E_Library.API.Services
             _userRequestRepository = userRequestRepository;
         }
 
+        public async Task<int> DeleteRequest(int id)
+        {
+           return await _userRequestRepository.DeleteRequest(id);
+        }
+
         public async Task<IEnumerable<RespRequestedBookDTO>> GetAllRequests()
         {
             return await _userRequestRepository.GetAllRequests();

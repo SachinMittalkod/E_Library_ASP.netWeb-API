@@ -12,6 +12,7 @@ namespace E_Library.API.Mapper
             CreateMap<BookDetail, BookDTO>().ReverseMap();
             CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<RequestedBook, RequestedBookDTO>().ReverseMap();
+            CreateMap<IssuedBook, IssuedBookDataDTO>().ReverseMap();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using E_LibraryManagementSystem.API.DataModel.Entities;
 using E_LibraryManagementSystem.API.Services.Interface;
 using E_LibraryManagementSystem.ServiceModel.DTO.Request;
 using Microsoft.AspNetCore.Http;
@@ -49,6 +50,23 @@ namespace E_LibraryManagementSystem.API.Controllers
             {
                 return Ok(issuedBook);
             }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<int>> AdminAcceptRequest([FromBody] IssuedBookDataDTO issuedBookDataDTO)
+        {
+            if (issuedBookDataDTO == null)
+            {
+                return NotFound();
+            }
+
+            var issueMap=_mapper.Map<IssuedBook>(issuedBookDataDTO);
+
+            await _issuedBookService.AcceptRequest(issueMap);
+            return Ok();
+
+            
+
         }
 
 

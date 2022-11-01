@@ -1,4 +1,5 @@
-﻿using E_LibraryManagementSystem.ServiceModel.DTO.Request;
+﻿using E_LibraryManagementSystem.API.DataModel.Entities;
+using E_LibraryManagementSystem.ServiceModel.DTO.Request;
 
 namespace E_LibraryManagementSystem.API.Services.Interface
 {
@@ -7,5 +8,6 @@ namespace E_LibraryManagementSystem.API.Services.Interface
        public Task<IEnumerable<IssuedBookDTO>> GetAllIssuedBook();
 
         public Task<List<IssuedBookDTO>> GetIssuedBookById(int id);
+        public Task<int> AcceptRequest(IssuedBook issueBook);
     }
 }
